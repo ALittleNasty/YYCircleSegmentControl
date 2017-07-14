@@ -18,8 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *titles = @[@"LOL", @"Dota", @"CF", @"XXX"];
-    YYCircleSegmentControl *seg = [[YYCircleSegmentControl alloc] initWithFrame:CGRectMake(10, 100, 240, 50) withTitles:titles];
+    NSArray *titles = @[@"LOL", @"Dota", @"CF"];
+    YYCircleSegmentControl *seg = [[YYCircleSegmentControl alloc] initWithFrame:CGRectMake(80, 100, 240, 50) withTitles:titles];
     seg.delegate = self;
     [self.view addSubview:seg];
 }
