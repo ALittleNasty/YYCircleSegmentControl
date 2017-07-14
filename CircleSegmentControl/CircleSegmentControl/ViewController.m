@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "YYCircleSegmentControl.h"
 
-@interface ViewController ()
+@interface ViewController ()<YYCircleSegmentControlDelegate>
 
 @end
 
@@ -20,8 +20,15 @@
     
     NSArray *titles = @[@"LOL", @"Dota", @"CF", @"XXX"];
     YYCircleSegmentControl *seg = [[YYCircleSegmentControl alloc] initWithFrame:CGRectMake(10, 100, 240, 50) withTitles:titles];
+    seg.delegate = self;
     [self.view addSubview:seg];
 }
 
+#pragma mark - YYCircleSegmentControlDelegate
+
+- (void)circleSegmentControlDidSelectedAtIndex:(NSInteger)index
+{
+    NSLog(@"选中第--%zd--个", index);
+}
 
 @end

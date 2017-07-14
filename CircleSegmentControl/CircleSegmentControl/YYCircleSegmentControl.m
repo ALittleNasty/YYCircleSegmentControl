@@ -156,6 +156,9 @@ static CGFloat kBorderWidth = 1.f;
     }
 }
 
+/**
+ *  隐藏与显示对应的竖直分割线
+ */
 - (void)hideCorrespondingVertialLine
 {
     if (_selectedIndex == 0) {
